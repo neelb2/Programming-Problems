@@ -6,6 +6,9 @@ import UIKit
 
 //Left Rotate Using Two Temp Array
 func rotateThis(array:[Int], index:Int) -> [Int]{
+    if array.count < index{
+        return array
+    }
     let count = array.count
     let tempArray = array[0..<index]
     var restArray = array[index..<count]
